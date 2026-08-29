@@ -1,0 +1,11 @@
+# CLDGME-KOA runtime dependencies
+# Developed with Python 3.11.4 / PyTorch 2.6.0+cu118 / CUDA 11.8
+torch>=2.0
+torchvision>=0.15
+transformers>=4.30
+sentence-transformers>=2.2
+numpy>=1.24
+PyYAML>=6.0
+scikit-learn>=1.2
+scipy>=1.10
+tqdm>=4.65

@@ -1,0 +1,45 @@
+seed: 42
+# Local data root. Place the OAI-derived split folders as
+#   <image_root>/{train,val,test}/{0,1,2,3,4}/
+# and point this key to that directory (see README "Data").
+image_root: ./data/oai-xray
+output_dir: runs/cldgme_paper_main
+image_size: 224
+batch_size: 6
+num_workers: 4
+epochs: 20
+lr: 1e-4
+weight_decay: 1e-4
+embed_dim: 256
+num_classes: 5
+loss_alpha_text: 0.5
+loss_beta_ordinal: 1.0
+loss_gamma_consistency: 0.73
+label_smoothing: 0.05
+pretrained_backbone: true
+backbone_type: convnext_tiny
+selection_metric: accuracy
+prompt_file: configs/kl_prompts_paper.yaml
+use_weighted_sampler: false
+use_weighted_loss: true
+use_flip_ensemble_eval: true
+save_confusion_matrix: true
+save_eval_predictions: true
+prediction_source: ordinal
+search_ordinal_thresholds: false
+search_text_ordinal_fusion: false
+use_dgme: true
+use_dgme_with_local: false
+dgme_stage: stage2
+dgme_dropout: 0.0
+dgme_use_ocab: true
+dgme_use_hrfab: true
+use_ordinal_branch: true
+use_text_branch: true
+use_consistency_loss: true
+ordinal_type: coral
+ordinal_head_type: cumulative_link
+text_encoder_type: hf
+hf_text_model_name: sentence-transformers/all-MiniLM-L6-v2
+freeze_hf_text_encoder: true
+notes: "Paper-aligned main experiment: OCLR cumulative-link head, fixed 0.5 decoding, DGME=OCAB+HRFAB at Stage2, paper Table-1 prompts with PE, lambda_PS=0.5/lambda_OCLR=1.0/lambda_HFC=0.73."

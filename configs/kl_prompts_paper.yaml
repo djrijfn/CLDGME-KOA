@@ -1,0 +1,38 @@
+# Paper-aligned prompt set (Table 1 of en826.tex verbatim).
+# Each grade: 3 local pathological prompts + 3 global degenerative prompts.
+prompts:
+  "0":
+    - "No marginal osteophytes are visible along the femoral condyles, tibial plateau, or tibial spines."
+    - "The medial and lateral tibiofemoral joint spaces are uniform and fully preserved."
+    - "The subchondral bone and local cortical contours remain smooth and normal, without sclerosis or deformity."
+    - "The knee radiograph shows no radiographic evidence of osteoarthritis."
+    - "Overall joint structure is well preserved, with normal alignment and no degenerative abnormality."
+    - "This image represents a normal knee with preserved joint space and no structural degeneration."
+  "1":
+    - "A minute or equivocal marginal osteophyte may be present at the tibial spine or joint margin."
+    - "The tibiofemoral joint space is largely preserved, with only doubtful focal narrowing."
+    - "Mild irregularity may be seen along the femoral condyle or tibial plateau edge, without definite sclerosis or deformity."
+    - "The knee radiograph shows doubtful early osteoarthritic change."
+    - "Overall joint structure is mostly preserved, with only subtle and equivocal degenerative findings."
+    - "This image represents a suspicious or borderline stage of KOA without definite structural loss."
+  "2":
+    - "Definite small marginal osteophytes are visible along the femoral condyle, tibial plateau, or tibial spines."
+    - "Mild focal narrowing may be present in the affected tibiofemoral compartment, although joint space is still partly preserved."
+    - "Early subchondral remodeling is visible, while bone-end contour remains largely maintained without marked deformity."
+    - "The knee radiograph shows mild osteoarthritic degeneration."
+    - "Overall findings are consistent with definite osteophyte formation and early structural change."
+    - "This image represents an early but established stage of KOA with limited joint deterioration."
+  "3":
+    - "Multiple moderate osteophytes are present along the femoral condylar and tibial margins."
+    - "Definite asymmetric narrowing is visible in the affected tibiofemoral compartment."
+    - "Subchondral sclerosis and early bone-end contour alteration are present beneath the degenerated joint surface."
+    - "The knee radiograph shows moderate osteoarthritic degeneration."
+    - "Overall structural deterioration is evident, with combined osteophyte formation, joint-space narrowing, and sclerosis."
+    - "This image represents a progressed stage of KOA with clear radiographic joint damage."
+  "4":
+    - "Large bulky osteophytes are visible along the femoral and tibial joint margins."
+    - "The affected tibiofemoral joint space is markedly narrowed or nearly obliterated."
+    - "Severe subchondral sclerosis and definite bony deformity are present in the femoral condyle or tibial plateau."
+    - "The knee radiograph shows severe osteoarthritic degeneration."
+    - "Overall joint architecture is markedly distorted, with advanced structural collapse and end-stage degenerative change."
+    - "This image represents severe KOA with extensive joint destruction and definite bone-end deformity."

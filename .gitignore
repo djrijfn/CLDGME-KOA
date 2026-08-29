@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.log
+*.db
+*.dmp
+
+# local data
+data/
+*.png
+*.jpg
+*.jpeg
+
+# local scratch
+_tmp/
+_deps/
+testdir/
+world-tech-briefing/
+tmp_*
