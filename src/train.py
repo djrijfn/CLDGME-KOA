@@ -907,7 +907,6 @@ def main():
         print(
             f"epoch={epoch + 1} "
             f"text={val_metrics['train_loss_text']:.4f} "
-            f"cls={val_metrics['train_loss_class']:.4f} "
             f"ord={val_metrics['train_loss_ordinal']:.4f} "
             f"cons={val_metrics['train_loss_consistency']:.4f} "
             f"total={val_metrics['train_loss_total']:.4f} "

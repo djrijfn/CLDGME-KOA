@@ -44,16 +44,16 @@ Training objective:
 `L = lambda_PS * L_PS + lambda_OCLR * L_OCLR + lambda_HFC * L_HFC`
 with `lambda_PS = 0.5`, `lambda_OCLR = 1.0`, `lambda_HFC = 0.73`.
 
-## Main results (paper protocol)
+## Main results
 
-Model checkpoints are selected by validation Accuracy; the test set is used
-only for final reporting. Decoding uses the fixed threshold 0.5.
+As reported in the manuscript (HFC and dual-view interaction table).
 
-| Split | Accuracy | Macro-AUC | Macro-F1 | QWK | MAE |
-|---|---:|---:|---:|---:|---:|
-| Validation (best) | 0.6901 | 0.8678 | 0.6844 | 0.8280 | - |
-| Test (dual-view) | 0.7150 | 0.8921 | 0.7082 | 0.8596 | 0.3255 |
-| Test (single-view) | 0.7095 | 0.8905 | 0.7044 | 0.8562 | 0.3315 |
+| Setting | Accuracy | Macro-AUC | Macro-F1 | QWK |
+|---|---:|---:|---:|---:|
+| w/o HFC + single-view | 0.7101 | 0.9187 | 0.6805 | 0.8507 |
+| w/o HFC + dual-view | 0.7107 | 0.9211 | 0.6840 | 0.8520 |
+| with HFC + single-view | 0.7138 | 0.9131 | 0.6955 | 0.8422 |
+| with HFC + dual-view | **0.7204** | **0.9221** | **0.7054** | **0.8631** |
 
 ## Data
 
@@ -113,8 +113,7 @@ remain loadable.
 ## Baselines
 
 Seven literature baselines used in the manuscript comparison are implemented
-in `src/baselines.py` and trained through `src/train_baseline.py`. The
-corresponding `baseline_*.yaml` configs are not part of this minimal release.
+in `src/baselines.py` and trained through `src/train_baseline.py`.
 
 ## Implementation notes
 
