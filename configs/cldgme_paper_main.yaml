@@ -20,7 +20,12 @@ pretrained_backbone: true
 backbone_type: convnext_tiny
 selection_metric: accuracy
 prompt_file: configs/kl_prompts_paper.yaml
-use_weighted_sampler: false
+# Dynamic class-aware resampling used in the paper experiment. The sampler
+# draws 8,273 training samples with replacement per epoch. Per-sample weights
+# follow the KL0--KL4 factors [1, 2, 1, 2, 5].
+use_weighted_sampler: true
+sampler_class_factors: [1, 2, 1, 2, 5]
+sampler_num_samples: 8273
 use_weighted_loss: true
 use_flip_ensemble_eval: true
 save_confusion_matrix: true
